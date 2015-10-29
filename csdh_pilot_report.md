@@ -1,8 +1,6 @@
 # Clariah Structured Data (WP-4) Pilot report
 
-Richard Zijdeman
-Auke Rijpma
-Rinke Hoekstra
+Richard Zijdeman, Auke Rijpma, Rinke Hoekstra
 	
 | 			|Table of contents							|
 |-----------------------|-----------------------------------------------------------------------|
