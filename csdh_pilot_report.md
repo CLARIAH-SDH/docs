@@ -68,49 +68,54 @@ At the very least the country must be provided. The datahub should accommodate m
 The second key variable is time. At the very least the year/decade must be provided; more detailed dates should be accommodated by the hub as well. 
 Finally, there should be meaningful identifiers of the observations (household, individual or otherwise).
 The following variables are not necessary for the hub to function, but we  think they are important to be able to answer research questions with the data. These variables can also be used to prioritise datasets. These are the variables the hub should accommodate, meaning there is a  basic vocabulary/codebook present to allow the data to be linked to similar datasets. The QQT-pilot identified the following variables as important:
-* age
-* sex
-* household/family relation
-* occupation string
-* (occupation code)
-* enrolment
-* literacy
-* marital status
-* religion
-* person id
-* household id
-* place of birth
-(urban)
-(income)
-(name)
+
+- age
+- sex
+- household/family relation
+- occupation string
+- (occupation code)
+- enrolment
+- literacy
+- marital status
+- religion
+- person id
+- household id
+- place of birth
+-(urban)
+-(income)
+-(name)
+
 The list of  variables required some elaboration. Occupation strings were vital, though coded occupations make the data processing and analysis much easier. However, coding occupations in multiple large datasets would probably be too time-consuming. Likewise, variables for region and whether the location was urban were important. Such data could in theory be extracted from geocoded observations. However, geocoding of historical data is tricky. For example: it turned out to be very difficult to automatically geocode the Hungarian and Hapsburg regions. Finally, any individual/household-level income data would have been very useful, but such data at the microlevel is very rare.
 
 ###4.1.2 Macro data [macro]
 At the country-level adding all macro data from clio-infra should be fairly straightforward. See https://www.clio-infra.eu/datasets/indicators. To this the data from e.g. the labour relations hub can also be added. Nonetheless, some priorities are:
--gdp
--real wage
--inflation
--population (by various characteristics if possible for weighting / post- stratification)
--urbanisation
--life expectancy
--inequality
--poverty
--numeracy
--literacy
--average years of education
--enrolment
--polity2
+
+- gdp
+- real wage
+- inflation
+- population (by various characteristics if possible for weighting / post- stratification)
+- urbanisation
+- life expectancy
+- inequality
+- poverty
+- numeracy
+- literacy
+- average years of education
+- enrolment
+- polity2
 
 ###4.1.3 Data format requirements [format]
 As long as the project is running, we should be able to convert most data, provided the original data has some structure and has sufficient documentation. Sufficient documentation means the variables are properly described. If the variables do not cover it, the documentation should also contain information on the sample or population.
 The more interesting question is possibly what formats the hub should be able to deal with when users want to upload (or download) their data. While conversion might be tricky, some formats tend to contain highly structured data, so these should be easy to accomodate. Data file for statistical software usually come in highly structured tables with columns representing variables. To an extent, the same holds for relational databases, though they can have complex structures nonetheless. 
 Text files and excel allow more freedom in structuring the data. Form requirements therefore need to be determined. They are that the file follows some tabular dataformat: the top row should have variable names, below that each column contains the data for that variable. Each row should contain one observation. The hub could also accommodate a "presentation format" (like clio-infra) where a table represents one variable and rows/columns contain e.g. years/countries. If the data do not meet any of these requirements, users could be led through a data-cleaning workflow.
 Searching for useful datasets for the QQT-pilot has led to the following list of common formats in economic and social history.:
-Text based formats: csv, fwf, tsv, and other plain text: dat, raw, etc.. 
-Statistical package formats include: sav (spss), dta (stata), rdata (R ), sas. 
-Common Microsoft formats: MS excel (xls, xlsx), MS access (mdb, accdb, ...). 
-Relational database formats: db, dbf. Geographical data: (esri) shapefiles: shp, dbf etc.. Web formats: json, xml, html tables.
-Excel, csv, fwf, spss, stata, and access are probably the most important of these in economic and social history. 
+
+- Text based formats: csv, fwf, tsv, and other plain text: dat, raw, etc.. 
+- Statistical package formats include: sav (spss), dta (stata), rdata (R ), sas. 
+- Common Microsoft formats: MS excel (xls, xlsx), MS access (mdb, accdb, ...). 
+- Relational database formats: db, dbf. Geographical data: (esri) shapefiles: shp, dbf etc.. Web formats: json, xml, html tables.
+- Excel, csv, fwf, spss, stata, and access are probably the most important of these in economic and social history. 
+
 Data files for statistical software usually come in highly structured tables with columns representing variables. To an extent, the same holds for relational databases, though they can have complex structures nonetheless.  Text files and excel allow more freedom in structuring the data. Form requirements need to be set. They are that the file follows some tabular data format: the top row should have variable names, below that each column contains the data for that variable. Each row should contain one observation. The hub could also accommodate a "presentation format" (like Clio-Infra) where a table represents one variable and rows/columns contain e.g. years/countries. If the data do not meet any of these requirements, users could be led through a data-cleaning workflow.
 
 ## 4.2 Implications for the working process [implicationsProcess]
